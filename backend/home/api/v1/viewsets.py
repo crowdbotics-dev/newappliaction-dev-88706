@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import DATA
-from .serializers import DATASerializer
+from home.models import DATA,Studio
+from .serializers import DATASerializer,StudioSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class DATAViewSet(viewsets.ModelViewSet):
     serializer_class = DATASerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = DATA.objects.all()
+
+class StudioViewSet(viewsets.ModelViewSet):
+    serializer_class = StudioSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Studio.objects.all()

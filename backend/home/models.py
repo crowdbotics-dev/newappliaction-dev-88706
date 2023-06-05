@@ -4,3 +4,6 @@ class DATA(models.Model):
     'Generated Model'
     model = models.BigIntegerField()
     dfghj = models.BigIntegerField(null=True,blank=True,)
+class Studio(models.Model):
+    'Generated Model'
+    model = models.BigIntegerField()
